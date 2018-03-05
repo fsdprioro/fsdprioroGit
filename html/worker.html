@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>JavaScript</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Felix Sanchez"/>
+	<meta name="description" content="Ejemplos HTML5"/>	
+	<script type="text/javascript" src="js/tareaSegundoPlano.js"></script>
+
+</head>
+<body>
+	<header><h1>Prueba del DOM</h1></header>
+
+	<section>
+		<script>
+			var tareaSP;
+		//var pmensaje = document.getElementById("mensaje");
+		if (typeof(Worker) !== "undefined") { //el navegador lo soporta?
+			//ejecuta el javaScript en segundo plano
+			tareaSP = new Worker("tareaSegundoPlano.js");
+			
+			//recibir notificaciones
+			tareaSP.onmessage = function(datos) {/* event.data tenemos el dato que se notifica*/
+				document.getElementById("mensaje").innerHTML = datos.data;
+			}		
+		}else{ 
+			/*El navegador no lo soporta Web Worker*/
+			alert("no esta soportado todavia");
+		}
+
+		function pararTaseaSP(){
+			//terminar la tarea
+			tareaSP.terminate();
+			tareaSP = "undefined";
+		};
+
+
+
+
+	</script>
+
+	<button onclick="pararTareaSP()">Parar Tarea</button>
+	<p id="mensaje"></p>
+</section>
+
+<footer><small> todos los derechos reservados</small></footer>
+</body>
+</html>

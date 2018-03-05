@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FORMULARIOS</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Felix Sanchez"/>
+	<meta name="description" content="Ejemplos HTML5"/>
+	<link rel="stylesheet" href="css/myestilo2.css">
+	<script type="text/javascript" src="js/pruExam2.js" ></script>
+
+	<body oncontextmenu="return false">
+		<h1>DATOS DEL INGRESO</h1>
+		<form id="formExam2" action="exam2.html" method="get" onsubmit="return validarDatos()">
+			<!-- campo de entrada de tipo texto -->
+			<p>
+				<h3>Datos Personales</h3>
+				<label for="nombreFor">Nombre:</label>
+				<input type="text" id="nombreFor" name="fnombre" required size="35" maxlength="30" placeholder="Nombre persona"><br>
+				<label for="apellFor">Apellidos:</label>
+				<input type="text" id="apellFor" name="apellFor" required placeholder="Apellido persona" size="35" maxlength="30"><br>
+				<label for="dniFor">DNI:</label>
+				<input type="text" id="dniFor" name="dniFor" required placeholder="DNI personal" size="12" maxlength="10"><br>
+				<label for="numSsFor">Num. Seguridad Social:</label>
+				<input type="text" id="numSsFor" name="numSsFor"  required placeholder="número Seguridad social" size="14" maxlength="12"><br>				
+			</p>
+
+			<!-- campo de tipo radio button -->
+			<h3>Su última visita</h3>
+			<p>
+				<input type="radio" name="tiempoVisita" id="masDeAnio" value="2">
+				<label for="masDeAnio">Más de un año</label><br>
+				<input type="radio" name="tiempoVisita" id="menosDeAnio" value="1">
+				<label for="menosDeAnio">Menos de un año</label><br>	
+				<input type="radio" name="tiempoVisita" id="sinVisita" value="0" checked>
+				<label for="sinVisita">Nunca</label>
+			</p>
+
+			<!-- Campo de tipo checkbox -->
+			<h3>Cuadro médico</h3>
+			<p>
+				<input type="checkbox" name="fiebre" id="fiebre"><label for="fiebre">Fiebre</label><br>
+				<input type="checkbox" name="dolorMus" id="dolorMus"><label for="dolorMus">Dolor Muscular</label><br>
+				<input type="checkbox" name="dolorEst" id="dolorEst"><label for="dolorEst">Dolor Estomacal</label><br>
+				<input type="checkbox" name="vomitos" id="vomitos"><label for="vomitos">Vómitos</label><br>
+				<input type="checkbox" name="mareos" id="mareos"><label for="mareos">Mareos</label><br>
+				<input type="checkbox" name="hipertension" id="hipertension"><label for="hipertension">Hipertensión</label><br>
+				<input type="checkbox" name="trauma" id="trauma"><label for="trauma">Traumatismos</label><br>
+				<input type="checkbox" name="perdidaSensi" id="perdidaSensi"><label for="perdidaSensi">Perdida Sensibilidad</label><br>
+				<input type="checkbox" name="insuCardio" id="insuCardio"><label for="insuCardio">Insuficiencia Cardíaca</label><br>
+				<input type="checkbox" name="insuRespi" id="insuRespi"><label for="insuRespi">Insuficiencia RespiratoriaJueves</label><br>
+				<input type="checkbox" name="otrasDol" id="otrasDol"><label for="otrasDol">Otras Dolencias</label><br>
+			</p>
+
+			<!-- campo de entrada de tipo date -->
+			<p>
+				<label for="fecIngreso">Fecha Ingreso :</label>	
+				<input type="text" name="fecIngreso" id="fecIngreso" readonly>
+				<label for="horIngreso">Horario Ingreso :</label>	
+				<input type="text" name="horIngreso" id="horIngreso" readonly ><br><br><br>
+				<label for="diasIngreso">Dias de Ingreso :</label>	
+				<input type="text" name="diasIngreso" id="diasIngreso" readonly>
+				<br><br>
+			</p>
+
+			<p>
+				<!-- <input type="submit" value="aupa cultural"> -->
+				<button type="submit">Alta paciente</button>
+				<!-- <button onclick="validarForm()">ejecutar</button> -->
+				<input type="reset" value="Limpiar Datos">
+			</p>
+		</form>
+
+		<br>
+		<p>
+			Haz click el el botón Submit. el formulario se enviará <br>
+			<!--<button onclick="pulsadoBoton()">Botonete</button>-->
+		</p>
+	</body>
+	</html>
