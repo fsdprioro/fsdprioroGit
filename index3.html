@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>tablas 3333</title>
+	<meta charset="utf-8"></meta>
+	<style>table,th,tr,td{border: 2px blue solid;}</style>
+</head>
+<body>
+	<p>
+		<progress value="10" max="100" id="barra"></progress>
+		<br>
+		<input type="button" value="rellenar" onclick="setInterval('rellena()',1000)">
+
+		<script type="text/javascript">
+
+			function rellena() {
+				var barra = document.getElementById("barra");
+				barra.value+=5;
+			}
+
+		</script>
+
+	</p>
+	<p>
+	El partido<a href="http://www.upl.es"><abbr title="Unión del Pueblo Leones">UPL</abbr></a> es el partido del pueblo
+	<br>
+	
+
+
+
+	<br>
+		<abbr title="Organizacion de Naciones Unidas">ONU</abbr> <br>
+		Salimos el <time datetime="2014-05-25">25 de mayo</time><br>
+		saldré de marcha a las <time datetime="02:00">2am</time><br>
+		no volveré hasta el <time datetime="2018-06-08T14:30" title="2018-06-08T14:30Z">08 de junio de este año sobre las 2 y media de la tarde</time>
+	</p>
+
+
+
+<!-- Enlace con una imagen -->
+
+	<img src="images/" alt="">
+
+
+	<figure>
+		<blockquote>
+			El poder del lado oscuro reside en la fuerza de los jedis, 
+			en si lucha diaria contra las fuerzas del lado bueno.
+		</blockquote>
+
+		<figcaption>Conversación de la pelicula <cite>start work</cite> ralizada por <cite>Tim Burton</cite></figcaption>
+	</figure>
+
+	<!-- de otra forma más estándar -->
+		<blockquote>
+			El poder del lado oscuro reside en la fuerza de los jedis, 
+			en si lucha diaria contra las fuerzas del lado bueno.
+			<footer>
+				Conversación de la pelicula <cite>start work</cite> ralizada por <cite>Tim Burton</cite>
+			</footer>
+		</blockquote>
+
+
+
+
+   <footer>
+   	<p>
+   		vendemos de todo <small>&copy;2016 todos los derechos reservados</small>
+   	</p>
+   	
+   </footer>
+</body>
+</html>
