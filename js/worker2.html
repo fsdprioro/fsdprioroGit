@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>JavaScript</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Felix Sanchez"/>
+	<meta name="description" content="Ejemplos HTML5"/>	
+	<!-- <script type="text/javascript" src="js/tareaSegundoPlano.js"></script> -->
+
+</head>
+<body>
+	<header><h1>Prueba del DOM</h1></header>
+
+
+
+	<section>
+		<button onclick="pararTareaSP()">Parar Tarea</button>
+		<p id="mensaje"></p>
+		
+
+		<script>
+			var worker = new Worker("hacerCurro.js");
+
+			console.log("He instanciado el worker ", worker);
+			worker.addEventListener("message", function(e) {
+				console.log("Worker said: ", e.data);
+			}, false);
+
+			console.log("Voy a enviarte saludos ");
+			worker.postMessage("Te envio saludos"); // Send data to our worker.
+
+
+		</script>
+
+	</section>
+
+	<footer><small> todos los derechos reservados</small></footer>
+</body>
+</html>
