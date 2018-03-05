@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FORMULARIOS</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Felix Sanchez"/>
+	<meta name="description" content="Ejemplos HTML5"/>
+	<link rel="stylesheet" href="css/myestilo2.css">
+	<script type="text/javascript" src="js/pruForm.js" ></script>
+
+	<body oncontextmenu="return false">
+		<h1>CAMPOS DE FORMULARIOS</h1>
+		<form id="formPedido" action="indexform.html" method="get" onsubmit="return validar();">
+			<!-- <form action="demo_metodo_get_form.asp" method="post" target="_blank"> -->
+				<!-- campo de entrada de tipo texto -->
+				<p>
+					<label for="fnombre">Nombre:</label>
+					<input type="text" id="fnombre" name="fnombre" size="35" maxlength="30" placeholder="Nombre persona"><br>
+					<label for="fapell">Apellido:</label>
+					<input type="text" id="fapell" name="fapell" placeholder="Apellido persona" size="35" maxlength="30"><br>
+				</p>
+
+				<!-- campo de entrada de tipo password -->
+				<p>
+					<label for="clave">Palabra de paso:</label>	
+					<input type="password" name="clave" id="clave" size="30" maxlength="20"><br>
+				</p>
+
+				<!-- campo de tipo radio button -->
+				<h4>Indique su genero:</h4>
+				<p>
+					<input type="radio" name="genero" id="genero-hombre" value="Hombre">
+					<label for="genero-hombre">Hombre</label><br>
+					<input type="radio" name="genero" id="genero-mujer" value="Mujer" checked>
+					<label for="genero-mujer">Mujer</label>	
+				</p>
+
+				<!-- Campo de tipo checkbox -->
+				<h4>Dias de clase:</h4>
+				<p>
+					<input type="checkbox" name="lunes" id="lunes"><label for="lunes">Lunes</label><br>
+					<input type="checkbox" name="martes" id="martes"><label for="martes">Martes</label><br>
+					<input type="checkbox" name="miercoles" id="miercoles"><label for="miercoles">Miercoles</label><br>
+					<input type="checkbox" name="jueves" id="jueves"><label for="jueves">Jueves</label><br>
+					<input type="checkbox" name="viernes" id="viernes"><label for="viernes">Viernes</label><br>
+				</p>
+
+				<!-- campo de entrada de tipo Email -->
+				<p>
+					<label for="tuemail">Introduce tu Email:</label>	
+					<input type="email" name="tuemail" id="tuemail" required><br>
+				</p>
+
+				<!-- campo de entrada de tipo URL -->
+				<p>
+					<label for="tuurl">Introduce tu web:</label>
+					<input type="url" name="tuurl" id="tuurl" size="40">	
+					<!-- <input type="url" name="tuurl" id="tuurl" value="http://www.tusitio.com"><br>  lleva a error-->
+					<!-- <input type="url" name="tuurl" id="tuurl" placeholder="Ejem:http://www.tusitio.com" required> --><br>
+				</p>
+
+				<!-- campo de entrada de tipo Teléfono -->
+				<p>
+					<label for="tutlf">Introduce tu teléfono:</label>	
+					<input type="tef" name="tutlf" id="tutlf" required><br>
+				</p>
+
+				<!-- campo de entrada de tipo buscar -->
+				<p>
+					<label for="tubusqueda">Introduce tu búsqueda:</label>	
+					<input type="search" name="tubusqueda" id="tubusqueda" placeholder="teclea búsqueda.." size="45"><br>
+				</p>
+
+				<!-- campo de entrada de tipo number -->
+				<p>
+					<label for="cantidad-prod">Productos Solicitados:</label>	
+					<input type="number" name="cantidad-prod" id="cantidad-prod" min="2" max="30" step="2"><br>
+				</p>
+
+				<!-- campo de entrada de tipo range -->
+				<p>
+					<label for="exp-informatica">experiencia en informática:</label><br>	
+					<input type="range" name="exp-informatica" id="exp-informatica" min="0" max="50"><br>
+				</p>
+
+				<!-- campo de entrada de tipo date -->
+				<p>
+					<label for="fec-peticion">Fecha Petición:</label><br>	
+					<input type="date" name="fec-peticion" id="fec-peticion"><br>
+				</p>
+
+				<!-- campo de entrada de tipo time -->
+				<p>
+					<label for="hor-peticion">Horario Petición:</label><br>	
+					<input type="time" name="hor-peticion" id="hor-peticion" value="16:30"><br>
+				</p>
+
+				<!-- campo de entrada de tipo color -->
+				<p>
+					<label for="fav-color">Elige tu color favorito:</label><br>	
+					<input type="color" name="fav-color" id="fav-color"><br>
+				</p>
+
+				<!-- campo de entrada de tipo textarea -->
+				<p>
+					<label for="consulta">Realice su consulta:</label><br>	
+					<textarea name="consulta" id="consulta" cols="30" rows="3"></textarea><br>
+				</p>
+
+				<!-- campo de entrada de tipo caja de selección -->
+				<p>
+					<label for="consulta">Seleccione su estado:</label><br>	
+					<select name="estado" id="estado">
+						<option value="soltero">soltero</option>
+						<option value="casado">casado</option>
+						<option value="viudo">viudo</option>
+					</select>
+				</p>	
+
+				<!-- campo de entrada de tipo sublistas -->
+				<p>
+					<label for="publicidad">¿Como nos conocistes?:</label>
+					<select name="publicidad" id="publicidad">
+						<optgroup label="Online">
+							<option value="resdes-sociales">Redes sociales</option>
+							<option value="motores-busqueda">Motores de busqueda</option>
+						</optgroup>
+
+						<optgroup label="Offline">
+							<option value="periodico">Periodico</option>
+							<option value="paneles-publicidad">Paneles de publicidad</option>
+						</optgroup>
+
+						<optgroup label="otros">
+							<option value="amistades">Amistades</option>
+							<option value="enemigos">Enemigos</option>
+						</optgroup>
+
+					</select>
+				</p>	
+
+				<!-- Lista de valores predefinidos que se pueden asociar a un input -->
+				<p>
+					<label for="listacomunidades">Comunidad Autónoma:</label>
+					<datalist id="listacomunidades">
+						<option value=“CastillayLeon”></option>
+						<option value=“Ceuta”></option>
+						<option value=“CastillalaMancha”></option>
+						<option value=“Andalucia”></option>
+						<option value=“Cantabria”></option>
+						<option value=“Asturias”></option>
+						<option value=“Aragon”></option>
+					</datalist>
+					<input list="listacomunidades">
+				</p>
+			</p>
+			<br>
+			<!-- campo de entrada de tipo file -->
+			<p>
+				<label for="tufile">Selecciona el fichero:</label>	
+				<input type="file" name="tufile" id="tufile"><br>
+			</p>
+			<br>
+			<p>
+				<!-- <input type="submit" value="aupa cultural"> -->
+				<button type="submit">Validar Datos</button>
+				<!-- <button onclick="validarForm()">ejecutar</button> -->
+				<input type="reset" value="Limpiar Datos">
+			</p>
+		</form>
+
+
+
+		<br>
+		<p>
+			Haz click el el botón Submit. el formulario se enviará <br>
+			a una página del servidor con nombre "demo_metodo_get_form.asp".
+			<!--<button onclick="pulsadoBoton()">Botonete</button>-->
+		</p>
+	</body>
+	</html>
